@@ -11,25 +11,17 @@ require_once __DIR__ . '/partial/header.php';
             <p class="text-gray-500 text-sm">Gestão Psicológica Inteligente</p>
         </div>
 
-        <form id="loginForm" class="space-y-4">
+        <form id="loginForm" class="space-y-4" action="processar.php" method="POST">
             <div>
                 <label class="block text-sm font-medium mb-1">E-mail</label>
-                <input type="email" id="email" required class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2DAAA5] outline-none">
+                <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2DAAA5] outline-none">
             </div>
             <div>
                 <label class="block text-sm font-medium mb-1">Senha</label>
-                <input type="password" id="password" required class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2DAAA5] outline-none">
+                <input type="password" id="password" name="senha" required class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2DAAA5] outline-none">
             </div>
             <button type="submit" class="w-full btn-primary py-3 rounded-lg font-semibold mt-4">Entrar</button>
         </form>
     </div>
-
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            // Aqui faremos a chamada para o Webhook do seu n8n
-            console.log("Iniciando fluxo de login via n8n...");
-        });
-    </script>
 </body>
 </html>
