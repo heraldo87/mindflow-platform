@@ -20,7 +20,7 @@ require_once __DIR__ . '/partial/header.php';
             <p class="text-gray-500 text-sm">Inicie a gestão inteligente com clareza.</p>
         </div>
 
-        <form action="flow-handler.php" method="POST" class="space-y-4">
+        <form action="php/processar_cadastro_consultorio.php" method="POST" class="space-y-4">
             
             <input type="hidden" name="form_type" value="cadastro_clinica">
 
